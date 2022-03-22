@@ -1,0 +1,1502 @@
+<html>
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>(almost) all of my creative works</title>
+		<style>
+			/* cspell:disable-file */
+			/* webkit printing magic: print all background colors */
+			@font-face {
+				font-family: iaDuo;
+				src: url(fonts/iAWriterDuoS-Regular.woff2);
+				font-style: normal;
+				font-weight: normal;
+			}
+
+			@font-face {
+				font-family: iaDuo;
+				src: url(fonts/iAWriterDuoS-Italic.woff2);
+				font-style: italic;
+				font-weight: normal;
+			}
+
+			@font-face {
+				font-family: iaDuo;
+				src: url(fonts/iAWriterDuoS-Bold.woff2);
+				font-style: normal;
+				font-weight: bold;
+			}
+
+			@font-face {
+				font-family: iaDuo;
+				src: url(fonts/iAWriterDuoS-BoldItalic.woff2);
+				font-style: italic;
+				font-weight: bold;
+			}
+
+			html {
+				font-family: iaDuo, monospace;
+				-webkit-print-color-adjust: exact;
+			}
+
+			* {
+				box-sizing: border-box;
+				-webkit-print-color-adjust: exact;
+			}
+
+			html,
+			body {
+				margin: 0;
+				padding: 0;
+			}
+
+			@media only screen {
+				body {
+					margin: 2em auto;
+					max-width: 900px;
+					color: #00303b;
+				}
+			}
+
+			body {
+				line-height: 1.5;
+				white-space: pre-wrap;
+			}
+
+			a,
+			a.visited {
+				color: inherit;
+				text-decoration: underline;
+			}
+
+			.pdf-relative-link-path {
+				font-size: 80%;
+				color: #00303b;
+				#
+			}
+
+			h1,
+			h2,
+			h3 {
+				letter-spacing: -0.01em;
+				line-height: 1.2;
+				font-weight: 600;
+				margin-bottom: 0;
+			}
+
+			.page-title {
+				font-size: 2.5rem;
+				font-weight: 700;
+				margin-top: 0;
+				margin-bottom: 0.75em;
+			}
+
+			h1 {
+				font-size: 1.875rem;
+				margin-top: 1.875rem;
+			}
+
+			h2 {
+				font-size: 1.5rem;
+				margin-top: 1.5rem;
+			}
+
+			h3 {
+				font-size: 1.25rem;
+				margin-top: 1.25rem;
+			}
+
+			.source {
+				border: 1px solid #ddd;
+				border-radius: 3px;
+				padding: 1.5em;
+				word-break: break-all;
+			}
+
+			.callout {
+				border-radius: 3px;
+				padding: 1rem;
+			}
+
+			figure {
+				margin: 1.25em 0;
+				page-break-inside: avoid;
+			}
+
+			figcaption {
+				opacity: 0.5;
+				font-size: 85%;
+				margin-top: 0.5em;
+			}
+
+			mark {
+				background-color: transparent;
+			}
+
+			.indented {
+				padding-left: 1.5em;
+			}
+
+			hr {
+				background: transparent;
+				display: block;
+				width: 100%;
+				height: 1px;
+				visibility: visible;
+				border: none;
+				border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+			}
+
+			img {
+				max-width: 100%;
+			}
+
+			@media only print {
+				img {
+					max-height: 100vh;
+					object-fit: contain;
+				}
+			}
+
+			@page {
+				margin: 1in;
+			}
+
+			.collection-content {
+				font-size: 0.875rem;
+			}
+
+			.column-list {
+				display: flex;
+				justify-content: space-between;
+			}
+
+			.column {
+				padding: 0 1em;
+			}
+
+			.column:first-child {
+				padding-left: 0;
+			}
+
+			.column:last-child {
+				padding-right: 0;
+			}
+
+			.table_of_contents-item {
+				display: block;
+				font-size: 0.875rem;
+				line-height: 1.3;
+				padding: 0.125rem;
+			}
+
+			.table_of_contents-indent-1 {
+				margin-left: 1.5rem;
+			}
+
+			.table_of_contents-indent-2 {
+				margin-left: 3rem;
+			}
+
+			.table_of_contents-indent-3 {
+				margin-left: 4.5rem;
+			}
+
+			.table_of_contents-link {
+				text-decoration: none;
+				opacity: 0.7;
+				border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+			}
+
+			table,
+			th,
+			td {
+				border: 1px solid rgba(55, 53, 47, 0.09);
+				border-collapse: collapse;
+			}
+
+			table {
+				border-left: none;
+				border-right: none;
+			}
+
+			th,
+			td {
+				font-weight: normal;
+				padding: 0.25em 0.5em;
+				line-height: 1.5;
+				min-height: 1.5em;
+				text-align: left;
+			}
+
+			th {
+				color: #00303b99;
+			}
+
+			ol,
+			ul {
+				margin: 0;
+				margin-block-start: 0.6em;
+				margin-block-end: 0.6em;
+			}
+
+			li>ol:first-child,
+			li>ul:first-child {
+				margin-block-start: 0.6em;
+			}
+
+			ul>li {
+				list-style: disc;
+			}
+
+			ul.to-do-list {
+				text-indent: -1.7em;
+			}
+
+			ul.to-do-list>li {
+				list-style: none;
+			}
+
+			.to-do-children-checked {
+				text-decoration: line-through;
+				opacity: 0.375;
+			}
+
+			ul.toggle>li {
+				list-style: none;
+			}
+
+			ul {
+				padding-inline-start: 1.7em;
+			}
+
+			ul>li {
+				padding-left: 0.1em;
+			}
+
+			ol {
+				padding-inline-start: 1.6em;
+			}
+
+			ol>li {
+				padding-left: 0.2em;
+			}
+
+			.mono ol {
+				padding-inline-start: 2em;
+			}
+
+			.mono ol>li {
+				text-indent: -0.4em;
+			}
+
+			.toggle {
+				padding-inline-start: 0em;
+				list-style-type: none;
+			}
+
+			/* Indent toggle children */
+			.toggle>li>details {
+				padding-left: 1.7em;
+			}
+
+			.toggle>li>details>summary {
+				margin-left: -1.1em;
+			}
+
+			.selected-value {
+				display: inline-block;
+				padding: 0 0.5em;
+				background: rgba(206, 205, 202, 0.5);
+				border-radius: 3px;
+				margin-right: 0.5em;
+				margin-top: 0.3em;
+				margin-bottom: 0.3em;
+				white-space: nowrap;
+			}
+
+			.collection-title {
+				display: inline-block;
+				margin-right: 1em;
+			}
+
+			.simple-table {
+				margin-top: 1em;
+				font-size: 0.875rem;
+			}
+
+			.simple-table-header {
+				background: rgb(247, 246, 243);
+				color: #00303b;
+
+				font-weight: 500;
+			}
+
+			time {
+				opacity: 0.5;
+			}
+
+			.icon {
+				display: inline-block;
+				max-width: 1.2em;
+				max-height: 1.2em;
+				text-decoration: none;
+				vertical-align: text-bottom;
+				margin-right: 0.5em;
+			}
+
+			img.icon {
+				border-radius: 3px;
+			}
+
+			.user-icon {
+				width: 1.5em;
+				height: 1.5em;
+				border-radius: 100%;
+				margin-right: 0.5rem;
+			}
+
+			.user-icon-inner {
+				font-size: 0.8em;
+			}
+
+			.text-icon {
+				border: 1px solid #000;
+				text-align: center;
+			}
+
+			.page-cover-image {
+				display: block;
+				object-fit: cover;
+				width: 100%;
+				max-height: 30vh;
+			}
+
+			.page-header-icon {
+				font-size: 3rem;
+				margin-bottom: 1rem;
+			}
+
+			.page-header-icon-with-cover {
+				margin-top: -0.72em;
+				margin-left: 0.07em;
+			}
+
+			.page-header-icon img {
+				border-radius: 3px;
+			}
+
+			.link-to-page {
+				margin: 1em 0;
+				padding: 0;
+				border: none;
+				font-weight: 500;
+			}
+
+			p>.user {
+				opacity: 0.5;
+			}
+
+			td>.user,
+			td>time {
+				white-space: nowrap;
+			}
+
+			input[type="checkbox"] {
+				transform: scale(1.5);
+				margin-right: 0.6em;
+				vertical-align: middle;
+			}
+
+			p {
+				margin-top: 0.5em;
+				margin-bottom: 0.5em;
+			}
+
+			.image {
+				border: none;
+				margin: 1.5em 0;
+				padding: 0;
+				border-radius: 0;
+				text-align: center;
+			}
+
+			.code,
+			code {
+				background: rgba(135, 131, 120, 0.15);
+				border-radius: 3px;
+				padding: 0.2em 0.4em;
+				border-radius: 3px;
+				font-size: 85%;
+				tab-size: 2;
+			}
+
+			code {
+				color: #eb5757;
+			}
+
+			.code {
+				padding: 1.5em 1em;
+			}
+
+			.code-wrap {
+				white-space: pre-wrap;
+				word-break: break-all;
+			}
+
+			.code>code {
+				background: none;
+				padding: 0;
+				font-size: 100%;
+				color: inherit;
+			}
+
+			blockquote {
+				font-size: 1.25em;
+				margin: 1em 0;
+				padding-left: 1em;
+				border-left: 3px solid #00303b;
+
+			}
+
+			.bookmark {
+				text-decoration: none;
+				max-height: 8em;
+				padding: 0;
+				display: flex;
+				width: 100%;
+				align-items: stretch;
+			}
+
+			.bookmark-title {
+				font-size: 0.85em;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				height: 1.75em;
+				white-space: nowrap;
+			}
+
+			.bookmark-text {
+				display: flex;
+				flex-direction: column;
+			}
+
+			.bookmark-info {
+				flex: 4 1 180px;
+				padding: 12px 14px 14px;
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+			}
+
+			.bookmark-image {
+				width: 33%;
+				flex: 1 1 180px;
+				display: block;
+				position: relative;
+				object-fit: cover;
+				border-radius: 1px;
+			}
+
+			.bookmark-description {
+				color: #00303b99;
+				font-size: 0.75em;
+				overflow: hidden;
+				max-height: 4.5em;
+				word-break: break-word;
+			}
+
+			.bookmark-href {
+				font-size: 0.75em;
+				margin-top: 0.25em;
+			}
+
+
+			.highlight-default {
+				color: rgba(55, 53, 47, 1);
+			}
+
+			.highlight-gray {
+				color: rgba(120, 119, 116, 1);
+				fill: rgba(120, 119, 116, 1);
+			}
+
+			.highlight-brown {
+				color: rgba(159, 107, 83, 1);
+				fill: rgba(159, 107, 83, 1);
+			}
+
+			.highlight-orange {
+				color: rgba(217, 115, 13, 1);
+				fill: rgba(217, 115, 13, 1);
+			}
+
+			.highlight-yellow {
+				color: rgba(203, 145, 47, 1);
+				fill: rgba(203, 145, 47, 1);
+			}
+
+			.highlight-teal {
+				color: rgba(68, 131, 97, 1);
+				fill: rgba(68, 131, 97, 1);
+			}
+
+			.highlight-blue {
+				color: rgba(51, 126, 169, 1);
+				fill: rgba(51, 126, 169, 1);
+			}
+
+			.highlight-purple {
+				color: rgba(144, 101, 176, 1);
+				fill: rgba(144, 101, 176, 1);
+			}
+
+			.highlight-pink {
+				color: rgba(193, 76, 138, 1);
+				fill: rgba(193, 76, 138, 1);
+			}
+
+			.highlight-red {
+				color: rgba(212, 76, 71, 1);
+				fill: rgba(212, 76, 71, 1);
+			}
+
+			.highlight-gray_background {
+				background: rgba(241, 241, 239, 1);
+			}
+
+			.highlight-brown_background {
+				background: rgba(244, 238, 238, 1);
+			}
+
+			.highlight-orange_background {
+				background: rgba(251, 236, 221, 1);
+			}
+
+			.highlight-yellow_background {
+				background: rgba(251, 243, 219, 1);
+			}
+
+			.highlight-teal_background {
+				background: rgba(237, 243, 236, 1);
+			}
+
+			.highlight-blue_background {
+				background: rgba(231, 243, 248, 1);
+			}
+
+			.highlight-purple_background {
+				background: rgba(244, 240, 247, 0.8);
+			}
+
+			.highlight-pink_background {
+				background: rgba(249, 238, 243, 0.8);
+			}
+
+			.highlight-red_background {
+				background: rgba(253, 235, 236, 1);
+			}
+
+			.block-color-default {
+				color: inherit;
+				fill: inherit;
+			}
+
+			.block-color-gray {
+				color: rgba(120, 119, 116, 1);
+				fill: rgba(120, 119, 116, 1);
+			}
+
+			.block-color-brown {
+				color: rgba(159, 107, 83, 1);
+				fill: rgba(159, 107, 83, 1);
+			}
+
+			.block-color-orange {
+				color: rgba(217, 115, 13, 1);
+				fill: rgba(217, 115, 13, 1);
+			}
+
+			.block-color-yellow {
+				color: rgba(203, 145, 47, 1);
+				fill: rgba(203, 145, 47, 1);
+			}
+
+			.block-color-teal {
+				color: rgba(68, 131, 97, 1);
+				fill: rgba(68, 131, 97, 1);
+			}
+
+			.block-color-blue {
+				color: rgba(51, 126, 169, 1);
+				fill: rgba(51, 126, 169, 1);
+			}
+
+			.block-color-purple {
+				color: rgba(144, 101, 176, 1);
+				fill: rgba(144, 101, 176, 1);
+			}
+
+			.block-color-pink {
+				color: rgba(193, 76, 138, 1);
+				fill: rgba(193, 76, 138, 1);
+			}
+
+			.block-color-red {
+				color: rgba(212, 76, 71, 1);
+				fill: rgba(212, 76, 71, 1);
+			}
+
+			.block-color-gray_background {
+				background: rgba(241, 241, 239, 1);
+			}
+
+			.block-color-brown_background {
+				background: rgba(244, 238, 238, 1);
+			}
+
+			.block-color-orange_background {
+				background: rgba(251, 236, 221, 1);
+			}
+
+			.block-color-yellow_background {
+				background: rgba(251, 243, 219, 1);
+			}
+
+			.block-color-teal_background {
+				background: rgba(237, 243, 236, 1);
+			}
+
+			.block-color-blue_background {
+				background: rgba(231, 243, 248, 1);
+			}
+
+			.block-color-purple_background {
+				background: rgba(244, 240, 247, 0.8);
+			}
+
+			.block-color-pink_background {
+				background: rgba(249, 238, 243, 0.8);
+			}
+
+			.block-color-red_background {
+				background: rgba(253, 235, 236, 1);
+			}
+
+			.select-value-color-pink {
+				background-color: rgba(245, 224, 233, 1);
+			}
+
+			.select-value-color-purple {
+				background-color: rgba(232, 222, 238, 1);
+			}
+
+			.select-value-color-green {
+				background-color: rgba(219, 237, 219, 1);
+			}
+
+			.select-value-color-gray {
+				background-color: rgba(227, 226, 224, 1);
+			}
+
+			.select-value-color-opaquegray {
+				background-color: rgba(255, 255, 255, 0.0375);
+			}
+
+			.select-value-color-orange {
+				background-color: rgba(250, 222, 201, 1);
+			}
+
+			.select-value-color-brown {
+				background-color: rgba(238, 224, 218, 1);
+			}
+
+			.select-value-color-red {
+				background-color: rgba(255, 226, 221, 1);
+			}
+
+			.select-value-color-yellow {
+				background-color: rgba(253, 236, 200, 1);
+			}
+
+			.select-value-color-blue {
+				background-color: rgba(211, 229, 239, 1);
+			}
+
+			.checkbox {
+				display: inline-flex;
+				vertical-align: text-bottom;
+				width: 16;
+				height: 16;
+				background-size: 16px;
+				margin-left: 2px;
+				margin-right: 5px;
+			}
+
+			.checkbox-on {
+				background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+			}
+
+			.checkbox-off {
+				background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+			}
+		</style>
+	</head>
+
+	<body>
+		<article id="5834cf24-3930-4efa-84cb-8022264fcced" class="page sans">
+			<header>
+				<h1 class="page-title">(almost) all of my creative works</h1>
+			</header>
+			<div class="page-body">
+				<table class="collection-content">
+					<thead>
+						<tr>
+							<th>project</th>
+							<th><span class="icon property-icon"><svg viewBox="0 0 14 14"
+										style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0;-webkit-backface-visibility:hidden"
+										class="typesText">
+										<path
+											d="M7,4.56818 C7,4.29204 6.77614,4.06818 6.5,4.06818 L0.5,4.06818 C0.223858,4.06818 0,4.29204 0,4.56818 L0,5.61364 C0,5.88978 0.223858,6.11364 0.5,6.11364 L6.5,6.11364 C6.77614,6.11364 7,5.88978 7,5.61364 L7,4.56818 Z M0.5,1 C0.223858,1 0,1.223858 0,1.5 L0,2.54545 C0,2.8216 0.223858,3.04545 0.5,3.04545 L12.5,3.04545 C12.7761,3.04545 13,2.8216 13,2.54545 L13,1.5 C13,1.223858 12.7761,1 12.5,1 L0.5,1 Z M0,8.68182 C0,8.95796 0.223858,9.18182 0.5,9.18182 L11.5,9.18182 C11.7761,9.18182 12,8.95796 12,8.68182 L12,7.63636 C12,7.36022 11.7761,7.13636 11.5,7.13636 L0.5,7.13636 C0.223858,7.13636 0,7.36022 0,7.63636 L0,8.68182 Z M0,11.75 C0,12.0261 0.223858,12.25 0.5,12.25 L9.5,12.25 C9.77614,12.25 10,12.0261 10,11.75 L10,10.70455 C10,10.4284 9.77614,10.20455 9.5,10.20455 L0.5,10.20455 C0.223858,10.20455 0,10.4284 0,10.70455 L0,11.75 Z">
+										</path>
+									</svg></span>link</th>
+							<th><span class="icon property-icon"><svg viewBox="0 0 14 14"
+										style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0;-webkit-backface-visibility:hidden"
+										class="typesText">
+										<path
+											d="M7,4.56818 C7,4.29204 6.77614,4.06818 6.5,4.06818 L0.5,4.06818 C0.223858,4.06818 0,4.29204 0,4.56818 L0,5.61364 C0,5.88978 0.223858,6.11364 0.5,6.11364 L6.5,6.11364 C6.77614,6.11364 7,5.88978 7,5.61364 L7,4.56818 Z M0.5,1 C0.223858,1 0,1.223858 0,1.5 L0,2.54545 C0,2.8216 0.223858,3.04545 0.5,3.04545 L12.5,3.04545 C12.7761,3.04545 13,2.8216 13,2.54545 L13,1.5 C13,1.223858 12.7761,1 12.5,1 L0.5,1 Z M0,8.68182 C0,8.95796 0.223858,9.18182 0.5,9.18182 L11.5,9.18182 C11.7761,9.18182 12,8.95796 12,8.68182 L12,7.63636 C12,7.36022 11.7761,7.13636 11.5,7.13636 L0.5,7.13636 C0.223858,7.13636 0,7.36022 0,7.63636 L0,8.68182 Z M0,11.75 C0,12.0261 0.223858,12.25 0.5,12.25 L9.5,12.25 C9.77614,12.25 10,12.0261 10,11.75 L10,10.70455 C10,10.4284 9.77614,10.20455 9.5,10.20455 L0.5,10.20455 C0.223858,10.20455 0,10.4284 0,10.70455 L0,11.75 Z">
+										</path>
+									</svg></span>when?</th>
+							<th><span class="icon property-icon"><svg viewBox="0 0 14 14"
+										style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0;-webkit-backface-visibility:hidden"
+										class="typesMultipleSelect">
+										<path
+											d="M4,3 C4,2.447715 4.447715,2 5,2 L12,2 C12.5523,2 13,2.447716 13,3 C13,3.55228 12.5523,4 12,4 L5,4 C4.447715,4 4,3.55228 4,3 Z M4,7 C4,6.447715 4.447715,6 5,6 L12,6 C12.5523,6 13,6.447716 13,7 C13,7.55228 12.5523,8 12,8 L5,8 C4.447715,8 4,7.55228 4,7 Z M4,11 C4,10.447715 4.447715,10 5,10 L12,10 C12.5523,10 13,10.447716 13,11 C13,11.55228 12.5523,12 12,12 L5,12 C4.447715,12 4,11.55228 4,11 Z M2,4 C1.44771525,4 1,3.55228475 1,3 C1,2.44771525 1.44771525,2 2,2 C2.55228475,2 3,2.44771525 3,3 C3,3.55228475 2.55228475,4 2,4 Z M2,8 C1.44771525,8 1,7.55228475 1,7 C1,6.44771525 1.44771525,6 2,6 C2.55228475,6 3,6.44771525 3,7 C3,7.55228475 2.55228475,8 2,8 Z M2,12 C1.44771525,12 1,11.5522847 1,11 C1,10.4477153 1.44771525,10 2,10 C2.55228475,10 3,10.4477153 3,11 C3,11.5522847 2.55228475,12 2,12 Z">
+										</path>
+									</svg></span>how?</th>
+							<th width=></span>a few words!</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr id="b622e005-fbd9-41c1-a680-306bad21bcc8">
+							<td class="cell-title"><a
+									href="https://www.notion.so/Frequency-Dissonance-b622e005fbd941c1a680306bad21bcc8">Frequency
+									Dissonance</a></td>
+							<td class="cell-Eq]h">no link. yet ;)</td>
+							<td class="cell-Z`xQ">2022</td>
+							<td class="cell-fhtm"><span class="selected-value select-value-color-green">game</span><span
+									class="selected-value select-value-color-pink">upcomming</span><span
+									class="selected-value select-value-color-yellow">writing</span></td>
+							<td class="cell-SG}=">a ballad to the un-regulated platform of radio frequencys. third in
+								the genre of “small-world-many-endings-with-a-twist’em’ups”. part of the unannounced
+								thinky puzzle bundle.</td>
+						</tr>
+						<tr id="205813cf-b8a2-462e-b263-97e60d674a26">
+							<td class="cell-title"><a
+									href="https://www.notion.so/Radio-Bubbles-205813cfb8a2462eb26397e60d674a26">Radio
+									Bubbles</a></td>
+							<td class="cell-Eq]h"><a
+									href="https://ash-k.itch.io/radiobubble">https://ash-k.itch.io/radiobubble</a></td>
+							<td class="cell-Z`xQ">2022</td>
+							<td class="cell-fhtm"><span class="selected-value select-value-color-red">game?
+									plaything?</span></td>
+							<td class="cell-SG}=">a hacked together slow-social-media-virtual-radio-pet that lives on
+								your desktop. send 1 message per day and receive messages other radios sent out. will be
+								a part of <a href="https://eiii-zine.nl">EIII-Zine’s second issue</a>.</td>
+						</tr>
+						<tr id="9bf05500-8447-4b03-a284-6f7a5fb21e47">
+							<td class="cell-title"><a
+									href="https://www.notion.so/On-digital-coziness-9bf0550084474b03a2846f7a5fb21e47">On
+									digital coziness</a></td>
+							<td class="cell-Eq]h"><a
+									href="https://www.notion.so/cursor-vol-1-digital-hyyge-3331080a4a57446688ab272d6bab5690">https://low-lemming-d42.notion.site/cursor-vol-1-digital-hyyge-3331080a4a57446688ab272d6bab5690</a>
+							</td>
+							<td class="cell-Z`xQ">2022</td>
+							<td class="cell-fhtm"><span
+									class="selected-value select-value-color-brown">research</span><span
+									class="selected-value select-value-color-pink">upcomming</span><span
+									class="selected-value select-value-color-yellow">writing</span></td>
+							<td class="cell-SG}=">an essay about digital coziness, the way we hack things and an
+								addendum of how our computer vocabulary is defined by capitalism. will be released in
+								the first issue of <a href="https://cursormag.cargo.site">Cursor Magazine</a>.</td>
+						</tr>
+						<tr id="812c3ffa-d4ed-49f0-8c50-9e7430fff632">
+							<td class="cell-title"><a
+									href="https://www.notion.so/game-a-week-812c3ffad4ed49f08c509e7430fff632">game-a-week</a>
+							</td>
+							<td class="cell-Eq]h"><a
+									href="https://itch.io/c/2049895/game-a-week-2022">https://itch.io/c/2049895/game-a-week-2022</a>
+							</td>
+							<td class="cell-Z`xQ">2022</td>
+							<td class="cell-fhtm"><span class="selected-value select-value-color-green">game</span></td>
+							<td class="cell-SG}=">an attempt at making a lot of games, made me realise that “1 week”
+								does not mean “work on this for 1 week”. week 7 was skipped to work on this portfolio.
+							</td>
+						</tr>
+						<tr id="db32fb28-e0bf-4a30-93e0-b401eae6c76d">
+							<td class="cell-title"><a
+									href="https://www.notion.so/the-end-of-internet-db32fb28e0bf4a3093e0b401eae6c76d">the
+									end of internet</a></td>
+							<td class="cell-Eq]h"><a
+									href="https://being-brin.itch.io/net">https://being-brin.itch.io/net</a></td>
+							<td class="cell-Z`xQ">2022</td>
+							<td class="cell-fhtm"><span class="selected-value select-value-color-red">game?
+									plaything?</span></td>
+							<td class="cell-SG}=">a small commentary on my relationship to the internet. inspired by a
+								recently found fascination with netart and Vuk Ćosić’s File Extinguisher. </td>
+						</tr>
+						<tr id="77baab00-df7d-43b4-9fba-271528016524">
+							<td class="cell-title"><a
+									href="https://www.notion.so/Pico8-Creative-Coding-77baab00df7d43b49fba271528016524">Pico8
+									Creative Coding</a></td>
+							<td class="cell-Eq]h"><a href="https://imgur.com/a/06FmT4s">https://imgur.com/a/06FmT4s</a>
+							</td>
+							<td class="cell-Z`xQ">2022</td>
+							<td class="cell-fhtm"><span
+									class="selected-value select-value-color-yellow">animation</span><span
+									class="selected-value select-value-color-default">programming</span></td>
+							<td class="cell-SG}=">small sketches of semi-interactive crunchy pixels for an <a
+									href="https://www.lexaloffle.com/pico-8.php">imaginary game-console</a>. also a
+								temporary liberation from object-oriented-programming.</td>
+						</tr>
+						<tr id="4f8663a6-b6f5-4d8e-a920-0bf074d64596">
+							<td class="cell-title"><a
+									href="https://www.notion.so/ParadiseFM-4f8663a6b6f54d8ea9200bf074d64596">ParadiseFM</a>
+							</td>
+							<td class="cell-Eq]h"><a
+									href="https://paradise-place.github.io/paradise.fm/">https://paradise-place.github.io/paradise.fm/</a>
+							</td>
+							<td class="cell-Z`xQ">2022</td>
+							<td class="cell-fhtm"><span class="selected-value select-value-color-red">audio</span><span
+									class="selected-value select-value-color-brown">research</span><span
+									class="selected-value select-value-color-default">web</span></td>
+							<td class="cell-SG}="><del>podcast</del> radio interviews for the paradise discord community
+								of cool <del>game</del> creators. lead to a creation of a <del>webring</del> webvoid
+							</td>
+						</tr>
+						<tr id="911bf529-be6c-4bbb-9c06-c5ddeef75ff9">
+							<td class="cell-title"><a
+									href="https://www.notion.so/TikTok-Videos-911bf529be6c4bbb9c06c5ddeef75ff9">TikTok
+									Videos</a></td>
+							<td class="cell-Eq]h"><a
+									href="https://www.tiktok.com/@being_brin">https://www.tiktok.com/@being_brin</a>
+							</td>
+							<td class="cell-Z`xQ">2021-22</td>
+							<td class="cell-fhtm"><span
+									class="selected-value select-value-color-yellow">animation</span><span
+									class="selected-value select-value-color-gray">video</span></td>
+							<td class="cell-SG}=">as bad as social media can be the trashiness and shortform format of
+								tiktok leads me to creating videos. sometimes.</td>
+						</tr>
+						<tr id="3b988364-b489-4773-883c-5a09d43b8f68">
+							<td class="cell-title"><a
+									href="https://www.notion.so/tilt-3b988364b4894773883c5a09d43b8f68">/tilt/</a></td>
+							<td class="cell-Eq]h"><a
+									href="https://www.newgrounds.com/portal/view/832594">https://www.newgrounds.com/portal/view/832594</a>
+							</td>
+							<td class="cell-Z`xQ">2021-22</td>
+							<td class="cell-fhtm"><span class="selected-value select-value-color-green">game</span><span
+									class="selected-value select-value-color-pink">upcomming</span></td>
+							<td class="cell-SG}=">an alternative controls <a
+									href="https://mut.media/skategames/">skategame</a> that encouraged pilots to cheat
+								and a unique “timebank” metagame. finally, a love letter to rigidbodies.</td>
+						</tr>
+						<tr id="751199e4-7d56-4229-a4e0-cb84181e4e88">
+							<td class="cell-title"><a
+									href="https://www.notion.so/One-Btn-Bosses-751199e47d564229a4e0cb84181e4e88">One Btn
+									Bosses</a></td>
+							<td class="cell-Eq]h"><a
+									href="https://www.newgrounds.com/portal/view/793986">https://www.newgrounds.com/portal/view/793986</a>
+							</td>
+							<td class="cell-Z`xQ">2021-22</td>
+							<td class="cell-fhtm"><span class="selected-value select-value-color-green">game</span><span
+									class="selected-value select-value-color-pink">pixelart</span><span
+									class="selected-value select-value-color-pink">upcomming</span></td>
+							<td class="cell-SG}=">a design exercise in getting the most out of one button and an ode to
+								my teenage years that were spent fighting bosses in world of warcraft. </td>
+						</tr>
+						<tr id="e9b57518-50a7-4edb-b8ee-b80c39df90c5">
+							<td class="cell-title"><a
+									href="https://www.notion.so/pixeljank-graphic-design-e9b5751850a74edbb8eeb80c39df90c5">pixeljank
+									graphic design</a></td>
+							<td class="cell-Eq]h"><a href="https://imgur.com/a/xBD4Wp4">https://imgur.com/a/xBD4Wp4</a>
+							</td>
+							<td class="cell-Z`xQ">2021-22</td>
+							<td class="cell-fhtm"><span class="selected-value select-value-color-blue">graphic
+									design</span></td>
+							<td class="cell-SG}=">a collection of posters and album covers created with digital collages
+								of resized images. aptly named “pixeljank” by the members of paradise discord community
+							</td>
+						</tr>
+						<tr id="14e77a22-27ec-4a37-bfe9-838acd30c15d">
+							<td class="cell-title"><a
+									href="https://www.notion.so/Analogue-Photography-14e77a2227ec4a37bfe9838acd30c15d">Analogue
+									Photography</a></td>
+							<td class="cell-Eq]h"><a href="https://imgur.com/a/bSqkOLy">https://imgur.com/a/bSqkOLy</a>
+							</td>
+							<td class="cell-Z`xQ">2021-22</td>
+							<td class="cell-fhtm"><span
+									class="selected-value select-value-color-purple">photography</span></td>
+							<td class="cell-SG}=">photos of friends, objects and architecture. but in a format that
+								allowed me to feel more free with the process of taking photos.</td>
+						</tr>
+						<tr id="13e58b23-e38c-4a18-b0d7-58248298c2ec">
+							<td class="cell-title"><a
+									href="https://www.notion.so/Krowbar-13e58b23e38c4a18b0d758248298c2ec">Krowbar</a>
+							</td>
+							<td class="cell-Eq]h"><a
+									href="https://being-brin.itch.io/krowbar">https://being-brin.itch.io/krowbar</a>
+							</td>
+							<td class="cell-Z`xQ">2021</td>
+							<td class="cell-fhtm"><span class="selected-value select-value-color-green">game</span><span
+									class="selected-value select-value-color-pink">pixelart</span></td>
+							<td class="cell-SG}=">a horribly bad game with an immensely beautiful world that i want to
+								explorer again in the future</td>
+						</tr>
+						<tr id="cc0c22ed-d02c-41e8-ad0c-569d54f19b35">
+							<td class="cell-title"><a
+									href="https://www.notion.so/SMUGGLER-30XX-cc0c22edd02c41e8ad0c569d54f19b35">SMUGGLER
+									30XX</a></td>
+							<td class="cell-Eq]h"><a
+									href="https://being-brin.itch.io/30xx">https://being-brin.itch.io/30xx</a></td>
+							<td class="cell-Z`xQ">2021</td>
+							<td class="cell-fhtm"><span class="selected-value select-value-color-green">game</span><span
+									class="selected-value select-value-color-pink">pixelart</span><span
+									class="selected-value select-value-color-yellow">writing</span></td>
+							<td class="cell-SG}=">a game about lying at security borders. second in the genre of
+								“small-world-many-endings-with-a-twist’em’ups”</td>
+						</tr>
+						<tr id="aeb2172c-7876-4284-96d3-00d687c50001">
+							<td class="cell-title"><a
+									href="https://www.notion.so/ASCII-Art-Games-aeb2172c7876428496d300d687c50001">ASCII
+									Art Games</a></td>
+							<td class="cell-Eq]h"><a
+									href="https://itch.io/c/2364106/games">https://itch.io/c/2364106/games</a></td>
+							<td class="cell-Z`xQ">2021</td>
+							<td class="cell-fhtm"><span class="selected-value select-value-color-green">game</span><span
+									class="selected-value select-value-color-gray">typography</span></td>
+							<td class="cell-SG}=">a set of sketched games that explorers typography glyphs as an
+								graphical element of abstraction. highly inspired by <a
+									href="https://fourbitfriday.itch.io/absurdia">FOURBITFRIDAY’s Atgtha in Absurdia</a>
+							</td>
+						</tr>
+						<tr id="bd804969-8695-4f7e-84a5-85fb0b9a8318">
+							<td class="cell-title"><a
+									href="https://www.notion.so/Shit-Hardware-Manifesto-bd80496986954f7e84a585fb0b9a8318">Shit
+									Hardware Manifesto</a></td>
+							<td class="cell-Eq]h"><a
+									href="https://photos.app.goo.gl/yX7ysDWF1PiyLJS56">https://photos.app.goo.gl/yX7ysDWF1PiyLJS56</a>
+							</td>
+							<td class="cell-Z`xQ">2021</td>
+							<td class="cell-fhtm"><span class="selected-value select-value-color-red">print</span><span
+									class="selected-value select-value-color-yellow">writing</span></td>
+							<td class="cell-SG}=">a manifesto for awareness around the hardware we use and a plea for
+								creation of accessible media</td>
+						</tr>
+						<tr id="d7543f81-411f-4f89-98b6-71f3b5b17812">
+							<td class="cell-title"><a
+									href="https://www.notion.so/Make-games-not-made-games-d7543f81411f4f8998b671f3b5b17812">Make
+									games, not made games</a></td>
+							<td class="cell-Eq]h"><a
+									href="https://brin.neocities.org/posts/2021-03-17-process.html">https://brin.neocities.org/posts/2021-03-17-process.html</a>
+							</td>
+							<td class="cell-Z`xQ">2021</td>
+							<td class="cell-fhtm"><span class="selected-value select-value-color-yellow">writing</span>
+							</td>
+							<td class="cell-SG}=">a piece on enjoying the process. born out of joy of creation and
+								frustration of my current environment.</td>
+						</tr>
+						<tr id="5023bcc7-61c6-4036-bd35-7ee5359bed72">
+							<td class="cell-title"><a
+									href="https://www.notion.so/Movement-in-video-games-5023bcc761c64036bd357ee5359bed72">Movement
+									in video games</a></td>
+							<td class="cell-Eq]h"><a
+									href="http://brin.neocities.org/momentum.html">http://brin.neocities.org/momentum.html</a>
+							</td>
+							<td class="cell-Z`xQ">2021</td>
+							<td class="cell-fhtm"><span class="selected-value select-value-color-yellow">writing</span>
+							</td>
+							<td class="cell-SG}=">a research paper on movement in video games as a mechanic. highly
+								influenced by the visceral feeling of control and inspired by <a
+									href="https://kotaku.com/in-praise-of-sticky-friction-5558166">Tim Roger’s Sticky
+									Friction</a></td>
+						</tr>
+						<tr id="0c1f5d71-dc16-4403-b9da-3bd2968fcca6">
+							<td class="cell-title"><a
+									href="https://www.notion.so/FWD-0c1f5d71dc164403b9da3bd2968fcca6">&gt;&gt;FWD</a>
+							</td>
+							<td class="cell-Eq]h"><a
+									href="https://being-brin.itch.io/fwd">https://being-brin.itch.io/fwd</a></td>
+							<td class="cell-Z`xQ">2021</td>
+							<td class="cell-fhtm"><span class="selected-value select-value-color-green">game</span></td>
+							<td class="cell-SG}=">a mouse only racing game about going fast and escaping an ever
+								encroaching fog of void by someone who hates racing games. featured in <a
+									href="https://superraregames.com/products/srg-mixtape-volume-2">INIDE MIXTAPE Vol.
+									2</a></td>
+						</tr>
+						<tr id="3632a613-9f91-4b71-80d9-e899b245d133">
+							<td class="cell-title"><a
+									href="https://www.notion.so/Pixel-Illustrations-3632a6139f914b7180d9e899b245d133">Pixel
+									Illustrations</a></td>
+							<td class="cell-Eq]h"><a href="https://imgur.com/a/1ar1Uwh">https://imgur.com/a/1ar1Uwh</a>
+							</td>
+							<td class="cell-Z`xQ">2021</td>
+							<td class="cell-fhtm"><span
+									class="selected-value select-value-color-pink">illustration</span><span
+									class="selected-value select-value-color-pink">pixelart</span></td>
+							<td class="cell-SG}=">a collection of illustrations done in a low enough resolution that
+								it’s pixel art but high enough resolution that I can use a tablet.</td>
+						</tr>
+						<tr id="aac29456-c1de-4153-86da-e39f3d8a047e">
+							<td class="cell-title"><a
+									href="https://www.notion.so/Stickers-aac29456c1de415386dae39f3d8a047e">Stickers</a>
+							</td>
+							<td class="cell-Eq]h"><a href="https://imgur.com/a/Bi5MVYO">https://imgur.com/a/Bi5MVYO</a>
+							</td>
+							<td class="cell-Z`xQ">2021</td>
+							<td class="cell-fhtm"><span
+									class="selected-value select-value-color-pink">illustration</span></td>
+							<td class="cell-SG}=">a realisation that took me too long - printing things i make and
+								sticking them on objects is fun.</td>
+						</tr>
+						<tr id="12ab9bcc-4a41-4873-b0bb-0d113f7fafc2">
+							<td class="cell-title"><a
+									href="https://www.notion.so/Binary-Quest-12ab9bcc4a414873b0bb0d113f7fafc2">Binary
+									Quest</a></td>
+							<td class="cell-Eq]h"><a
+									href="https://www.newgrounds.com/portal/view/786047">https://www.newgrounds.com/portal/view/786047</a>
+							</td>
+							<td class="cell-Z`xQ">2021</td>
+							<td class="cell-fhtm"><span class="selected-value select-value-color-green">game</span><span
+									class="selected-value select-value-color-yellow">writing</span></td>
+							<td class="cell-SG}=">a game about saying yes or no. first in the genre of
+								“small-world-many-endings-with-a-twist’em’ups”</td>
+						</tr>
+						<tr id="3a3b3d74-b1a0-40ab-9381-20ce1f4faf9b">
+							<td class="cell-title"><a
+									href="https://www.notion.so/Blog-3a3b3d74b1a040ab938120ce1f4faf9b">Blog</a></td>
+							<td class="cell-Eq]h"><a href="https://brin.neocities.org/">https://brin.neocities.org</a>
+							</td>
+							<td class="cell-Z`xQ">2020-22</td>
+							<td class="cell-fhtm"><span class="selected-value select-value-color-yellow">writing</span>
+							</td>
+							<td class="cell-SG}=">casual (but more thoughtful than twitter) musings on the things that i
+								do. started as a way of getting closer with the act of writing words and stringing them
+								into something coherent.</td>
+						</tr>
+						<tr id="f1ac6d75-0484-4648-90d3-1f476ebb7b24">
+							<td class="cell-title"><a
+									href="https://www.notion.so/Digicam-Photography-f1ac6d750484464890d31f476ebb7b24">Digicam
+									Photography</a></td>
+							<td class="cell-Eq]h"><a
+									href="https://photos.app.goo.gl/TndnadUpQSoxA9KPA">https://photos.app.goo.gl/TndnadUpQSoxA9KPA</a>
+							</td>
+							<td class="cell-Z`xQ">2020-22</td>
+							<td class="cell-fhtm"><span
+									class="selected-value select-value-color-purple">photography</span></td>
+							<td class="cell-SG}=">first attempt of constrained photography, using old digital cameras.
+								inspired by the genius of <a href="https://www.froyotam.info">Froyo Tam’s works</a></td>
+						</tr>
+						<tr id="2c59af0c-f485-4440-9e4b-20d5095946ab">
+							<td class="cell-title"><a
+									href="https://www.notion.so/Lost-Confused-2c59af0cf48544409e4b20d5095946ab">Lost
+									&amp; Confused</a></td>
+							<td class="cell-Eq]h"><a
+									href="https://being-brin.itch.io/lost-confused">https://being-brin.itch.io/lost-confused</a>
+							</td>
+							<td class="cell-Z`xQ">2020</td>
+							<td class="cell-fhtm"><span class="selected-value select-value-color-green">game</span><span
+									class="selected-value select-value-color-pink">pixelart</span></td>
+							<td class="cell-SG}=">a walking simulator set in a desert with cacti that can talk.</td>
+						</tr>
+						<tr id="ab4bc1bf-5763-4916-b536-5a5f5fda436d">
+							<td class="cell-title"><a
+									href="https://www.notion.so/Chicken-Defense-ab4bc1bf57634916b5365a5f5fda436d">Chicken
+									Defense</a></td>
+							<td class="cell-Eq]h"><a
+									href="https://rimo.itch.io/chicken-defense">https://rimo.itch.io/chicken-defense</a>
+							</td>
+							<td class="cell-Z`xQ">2020</td>
+							<td class="cell-fhtm"><span class="selected-value select-value-color-green">game</span><span
+									class="selected-value select-value-color-pink">pixelart</span></td>
+							<td class="cell-SG}=">a result of frustration with the tower defense genre of games and a
+								frustrating wakup call to reconsider my process and how I collaborate.</td>
+						</tr>
+						<tr id="10c2bb2e-41cc-4cfc-a6cf-ccbeef8d9972">
+							<td class="cell-title"><a
+									href="https://www.notion.so/Disco-Room-10c2bb2e41cc4cfca6cfccbeef8d9972">Disco
+									Room</a></td>
+							<td class="cell-Eq]h"><a
+									href="https://being-brin.itch.io/disco-room">https://being-brin.itch.io/disco-room</a>
+							</td>
+							<td class="cell-Z`xQ">2020</td>
+							<td class="cell-fhtm"><span class="selected-value select-value-color-green">game</span><span
+									class="selected-value select-value-color-pink">pixelart</span></td>
+							<td class="cell-SG}=">first attempt at creating a synthesis of gameplay and sound, lead to a
+								chill coffee with the game’s composer and a hard-to-beat game with good beats.</td>
+						</tr>
+						<tr id="1cb8c2a8-3397-4af8-9c18-7c888455b8d0">
+							<td class="cell-title"><a
+									href="https://www.notion.so/Streaming-Games-1cb8c2a833974af89c187c888455b8d0">Streaming
+									Games</a></td>
+							<td class="cell-Eq]h"><a
+									href="https://photos.app.goo.gl/8DX8W494dqgLYvCC8">https://photos.app.goo.gl/8DX8W494dqgLYvCC8</a>
+							</td>
+							<td class="cell-Z`xQ">2020</td>
+							<td class="cell-fhtm"><span
+									class="selected-value select-value-color-yellow">animation</span></td>
+							<td class="cell-SG}=">animations for ITU’s end-of-semester games showcase stream. born out
+								of jealousy towards production value of NYU’s version of the same event.</td>
+						</tr>
+						<tr id="6ce7a180-1d08-4b65-ba0f-2b1463163a8f">
+							<td class="cell-title"><a
+									href="https://www.notion.so/Animation-Jams-6ce7a1801d084b65ba0f2b1463163a8f">Animation
+									Jams</a></td>
+							<td class="cell-Eq]h"></td>
+							<td class="cell-Z`xQ">2020</td>
+							<td class="cell-fhtm"><span
+									class="selected-value select-value-color-yellow">animation</span></td>
+							<td class="cell-SG}=">a method of surviving 2020 lockdowns: attending 1-hour animation jams
+								where you fall in love with the intricacies of motion. this lead you to taking an
+								animation winter semester at School of Motion</td>
+						</tr>
+						<tr id="7e471340-9374-4289-8cd0-b043ec8a0fe6">
+							<td class="cell-title"><a
+									href="https://www.notion.so/Cat-sketches-7e471340937442898cd0b043ec8a0fe6">Cat
+									sketches</a></td>
+							<td class="cell-Eq]h"><a
+									href="https://i.imgur.com/EMxirLb_d.webp?maxwidth=1520&amp;fidelity=grand">https://i.imgur.com/EMxirLb_d.webp?maxwidth=1520&amp;fidelity=grand</a>
+							</td>
+							<td class="cell-Z`xQ">2020</td>
+							<td class="cell-fhtm"><span
+									class="selected-value select-value-color-pink">illustration</span></td>
+							<td class="cell-SG}=">draw a blob, give it to your partner let them draw a cat out of the
+								blob. reverse the roles. repeat. a fun activity and one of my fondest memory of my
+								then-partner. done in a cat cafe for thematic points.</td>
+						</tr>
+						<tr id="11bbf9da-e626-46b2-9eea-083fbd705810">
+							<td class="cell-title"><a
+									href="https://www.notion.so/Magnetizer-11bbf9dae62646b29eea083fbd705810">Magnetizer</a>
+							</td>
+							<td class="cell-Eq]h"><a
+									href="https://being-brin.itch.io/magnetizer">https://being-brin.itch.io/magnetizer</a>
+							</td>
+							<td class="cell-Z`xQ">2020</td>
+							<td class="cell-fhtm"><span class="selected-value select-value-color-green">game</span></td>
+							<td class="cell-SG}=">platforming game with magnetic mechanics. thought me to lie to players
+								and was my first interactive piece that felt matured. featured in <a
+									href="https://pizzapranks.itch.io/indiepocalypse-7">INIPOCALYSPE Zine #07</a></td>
+						</tr>
+						<tr id="13e4850d-c228-48f9-9abf-a36cca5e8d5a">
+							<td class="cell-title"><a
+									href="https://www.notion.so/Trijam-Sketches-13e4850dc22848f99abfa36cca5e8d5a">Trijam
+									Sketches</a></td>
+							<td class="cell-Eq]h"><a
+									href="https://itch.io/c/2364121/trijam-sketches">https://itch.io/c/2364121/trijam-sketches</a>
+							</td>
+							<td class="cell-Z`xQ">2020</td>
+							<td class="cell-fhtm"><span class="selected-value select-value-color-green">game</span></td>
+							<td class="cell-SG}=">a series of 15 games, made in 15 weeks with each being developed in 3
+								hours. an effective way of learning game dev.</td>
+						</tr>
+						<tr id="2a9c9c51-6620-4709-a6ec-f5fc5df8668f">
+							<td class="cell-title"><a
+									href="https://www.notion.so/Other-games-2a9c9c5166204709a6ecf5fc5df8668f">Other
+									games</a></td>
+							<td class="cell-Eq]h"><a
+									href="https://being-brin.itch.io/krowbar">https://being-brin.itch.io/krowbar</a>
+							</td>
+							<td class="cell-Z`xQ">2019-22</td>
+							<td class="cell-fhtm"><span class="selected-value select-value-color-green">game</span></td>
+							<td class="cell-SG}=">other games that probably helped me become a better artist but aren’t
+								noteworthy enough for this spreadsheet.</td>
+						</tr>
+						<tr id="b7440f55-a1d3-44c7-b5bc-7972d11facb3">
+							<td class="cell-title"><a
+									href="https://www.notion.so/Architecture-posters-b7440f55a1d344c7b5bc7972d11facb3">Architecture
+									posters</a></td>
+							<td class="cell-Eq]h"><a
+									href="https://www.artstation.com/artwork/gJE1m8">https://www.artstation.com/artwork/gJE1m8</a>
+							</td>
+							<td class="cell-Z`xQ">2019</td>
+							<td class="cell-fhtm"><span
+									class="selected-value select-value-color-pink">illustration</span><span
+									class="selected-value select-value-color-red">print</span></td>
+							<td class="cell-SG}=">my dad runs a small architecture firm and has his son that know how to
+								do graphic design i was delegated in turning some plans into posters. highly bauhaus
+								inspired.</td>
+						</tr>
+						<tr id="26d0574f-73ea-4421-99af-1e81cafcc015">
+							<td class="cell-title"><a
+									href="https://www.notion.so/Korea-Photobook-26d0574f73ea442199af1e81cafcc015">Korea
+									- Photobook</a></td>
+							<td class="cell-Eq]h">TODO - add a link</td>
+							<td class="cell-Z`xQ">2019</td>
+							<td class="cell-fhtm"><span
+									class="selected-value select-value-color-purple">photography</span></td>
+							<td class="cell-SG}=">a photobook of a trip. taught me the importance of different kinds of
+								paper.</td>
+						</tr>
+						<tr id="363d8048-78d9-48ad-8c88-a1af084b2401">
+							<td class="cell-title"><a
+									href="https://www.notion.so/Cineline-UI-design-363d804878d948ad8c88a1af084b2401">Cineline
+									UI design</a></td>
+							<td class="cell-Eq]h"><a href="https://imgur.com/a/k018xlT">https://imgur.com/a/k018xlT</a>
+							</td>
+							<td class="cell-Z`xQ">2019</td>
+							<td class="cell-fhtm"><span class="selected-value select-value-color-brown">UI</span><span
+									class="selected-value select-value-color-pink">pixelart</span></td>
+							<td class="cell-SG}=">ui design for a hyperspecific console-like camera controller that
+								featured a 128x64px screen. hired while while being on a carsharing trip from Ljubljana
+								to Maribor.</td>
+						</tr>
+						<tr id="05ce4431-d109-419e-93bd-ff708fee0c97">
+							<td class="cell-title"><a
+									href="https://www.notion.so/Lockout-05ce4431d109419e93bdff708fee0c97">Lockout</a>
+							</td>
+							<td class="cell-Eq]h"><a
+									href="https://open.spotify.com/show/3SJ7inQTA9qazmTNRKAUuy?si=24c79d8e1f1448e8">https://open.spotify.com/show/3SJ7inQTA9qazmTNRKAUuy?si=24c79d8e1f1448e8</a>
+							</td>
+							<td class="cell-Z`xQ">2019</td>
+							<td class="cell-fhtm"><span class="selected-value select-value-color-red">audio</span><span
+									class="selected-value select-value-color-brown">research</span><span
+									class="selected-value select-value-color-gray">video</span></td>
+							<td class="cell-SG}=">a blind shot at being a youtuber/podcaster in a the
+								competitive-world-of-warcraft-player community which platoed </td>
+						</tr>
+						<tr id="f08e0b66-c054-4e21-beac-5a47e3ec382f">
+							<td class="cell-title"><a
+									href="https://www.notion.so/Milivoj-f08e0b66c0544e21beac5a47e3ec382f">Milivoj</a>
+							</td>
+							<td class="cell-Eq]h"><a
+									href="https://www.artstation.com/artwork/PmwgYL">https://www.artstation.com/artwork/PmwgYL</a>
+							</td>
+							<td class="cell-Z`xQ">2019</td>
+							<td class="cell-fhtm"><span class="selected-value select-value-color-blue">graphic
+									design</span><span class="selected-value select-value-color-purple">product
+									design</span></td>
+							<td class="cell-SG}=">first attempt at using music as a pivotal element of my works by
+								curating some of my favourite tracks into a mixtape. only two physical copies of the
+								disks were produced.</td>
+						</tr>
+						<tr id="54bc9b06-dcfa-470e-b181-5f06dc471694">
+							<td class="cell-title"><a
+									href="https://www.notion.so/Visual-Game-Design-Documents-54bc9b06dcfa470eb1815f06dc471694">Visual
+									Game Design Documents</a></td>
+							<td class="cell-Eq]h"><a
+									href="https://www.artstation.com/artwork/58xgn8">https://www.artstation.com/artwork/58xgn8</a>
+								<a
+									href="https://www.artstation.com/artwork/Pmxr44">https://www.artstation.com/artwork/Pmxr44</a>
+								<a
+									href="https://www.artstation.com/artwork/58bG98">https://www.artstation.com/artwork/58bG98</a>
+								<a
+									href="https://www.artstation.com/artwork/N5yvXd">https://www.artstation.com/artwork/N5yvXd</a>
+							</td>
+							<td class="cell-Z`xQ">2018-19</td>
+							<td class="cell-fhtm"><span class="selected-value select-value-color-blue">graphic
+									design</span><span class="selected-value select-value-color-yellow">writing</span>
+							</td>
+							<td class="cell-SG}=">retrospective looks on some of my first game-jam games. a way of
+								connecting myself with games without knowing how to make them.</td>
+						</tr>
+						<tr id="894d7378-d8e8-46d1-8a02-1f366f2616e3">
+							<td class="cell-title"><a
+									href="https://www.notion.so/Vicious-Voyage-894d7378d8e846d18a021f366f2616e3">Vicious
+									Voyage</a></td>
+							<td class="cell-Eq]h"><a
+									href="https://being-brin.itch.io/vicious-voyage">https://being-brin.itch.io/vicious-voyage</a>
+							</td>
+							<td class="cell-Z`xQ">2018</td>
+							<td class="cell-fhtm"><span class="selected-value select-value-color-green">game</span></td>
+							<td class="cell-SG}=">the first game i participated in developing. poured oil to the fire of
+								cross-disciplinary collaboration and gateway to an friendly community of slovenian game
+								developers</td>
+						</tr>
+						<tr id="7e97a1ee-e0da-4d01-8407-2288cb192f88">
+							<td class="cell-title"><a
+									href="https://www.notion.so/Fictional-postcards-7e97a1eee0da4d0184072288cb192f88">Fictional
+									postcards</a></td>
+							<td class="cell-Eq]h"><a
+									href="https://www.artstation.com/artwork/bEBno">https://www.artstation.com/artwork/bEBno</a>
+							</td>
+							<td class="cell-Z`xQ">2018</td>
+							<td class="cell-fhtm"><span class="selected-value select-value-color-blue">graphic
+									design</span></td>
+							<td class="cell-SG}=">an angry exploitation of image trace function in adobe illustrator.
+							</td>
+						</tr>
+						<tr id="e4ccce45-cd3e-4a6c-84a0-84d7bf82e43e">
+							<td class="cell-title"><a
+									href="https://www.notion.so/Low-DPI-Zine-e4ccce45cd3e4a6c84a084d7bf82e43e">Low DPI
+									Zine</a></td>
+							<td class="cell-Eq]h">TODO - add a link</td>
+							<td class="cell-Z`xQ">2017</td>
+							<td class="cell-fhtm"><span
+									class="selected-value select-value-color-pink">pixelart</span><span
+									class="selected-value select-value-color-red">print</span><span
+									class="selected-value select-value-color-brown">research</span></td>
+							<td class="cell-SG}=">a love letter to the aesthetics of computer windowing systems and
+								letters displayed at low resolutions. first occurrence of feeling emotion towards a
+								printed medium.</td>
+						</tr>
+						<tr id="93720f20-a49c-4739-b1cb-1d54dad07e28">
+							<td class="cell-title"><a
+									href="https://www.notion.so/World-of-Warcraft-Wildstar-UI-Design-93720f20a49c4739b1cb1d54dad07e28">World
+									of Warcraft &amp; Wildstar UI Design</a></td>
+							<td class="cell-Eq]h"><a
+									href="https://www.artstation.com/artwork/ba5lVm">https://www.artstation.com/artwork/ba5lVm</a>
+							</td>
+							<td class="cell-Z`xQ">2016-2019</td>
+							<td class="cell-fhtm"><span class="selected-value select-value-color-brown">UI</span></td>
+							<td class="cell-SG}=">large portion of my time playing world of warcraft was spent modifying
+								my user interface and coming up with different, aesthetically pleasing and functional
+								setups. think of it as my version of modding your tumblr theme.</td>
+						</tr>
+						<tr id="d7c44bdb-c1c4-4e2b-9df9-4d799373d873">
+							<td class="cell-title"><a
+									href="https://www.notion.so/Fictional-landscapes-architecture-d7c44bdbc1c44e2b9df94d799373d873">Fictional
+									landscapes &amp; architecture</a></td>
+							<td class="cell-Eq]h"><a href="https://imgur.com/a/dufh1n1">https://imgur.com/a/t1AmItM</a>
+							</td>
+							<td class="cell-Z`xQ">2016</td>
+							<td class="cell-fhtm"><span
+									class="selected-value select-value-color-pink">illustration</span></td>
+							<td class="cell-SG}=">inspired by the breathtaking concept art of vast, sprawling, worlds of
+								MMORPGs.</td>
+						</tr>
+						<tr id="d29d962a-6480-4858-b1d5-9217ffab454e">
+							<td class="cell-title"><a
+									href="https://www.notion.so/D-D-Public-GMing-d29d962a64804858b1d59217ffab454e">D&amp;D
+									(Public) GMing</a></td>
+							<td class="cell-Eq]h"><a
+									href="https://dndslovenija.wordpress.com/">https://dndslovenija.wordpress.com</a>
+							</td>
+							<td class="cell-Z`xQ">2013-17</td>
+							<td class="cell-fhtm"><span
+									class="selected-value select-value-color-default">acting</span><span
+									class="selected-value select-value-color-yellow">writing</span></td>
+							<td class="cell-SG}=">an excuse to do funny voices, dye paper with coffee water and use wax
+								seals in my creative endeavours. also the first foray into public organsiation.</td>
+						</tr>
+						<tr id="d64260b4-f5c6-45eb-a903-25d7749c0a46">
+							<td class="cell-title"><a
+									href="https://www.notion.so/Improv-Theatre-d64260b4f5c645eba90325d7749c0a46">Improv
+									Theatre</a></td>
+							<td class="cell-Eq]h">you had to be there to know it</td>
+							<td class="cell-Z`xQ">2013-17</td>
+							<td class="cell-fhtm"><span class="selected-value select-value-color-default">acting</span>
+							</td>
+							<td class="cell-SG}=">like theatre acting, but with less drama and more unpredictable
+								situations. probably less fun for the audience.</td>
+						</tr>
+						<tr id="b8f9d99c-61a5-4103-bba6-3de3f263de03">
+							<td class="cell-title"><a
+									href="https://www.notion.so/Highschool-newspaper-design-b8f9d99c61a54103bba63de3f263de03">Highschool
+									newspaper design</a></td>
+							<td class="cell-Eq]h">im actually happy i couldn’t find these.</td>
+							<td class="cell-Z`xQ">2013-16</td>
+							<td class="cell-fhtm"><span class="selected-value select-value-color-blue">graphic
+									design</span></td>
+							<td class="cell-SG}=">unsupervised attempts of typesetting. probably lead toward the
+								decision to study visual communication.</td>
+						</tr>
+						<tr id="4df5cf9b-bfea-4961-9dd2-e17efec2facf">
+							<td class="cell-title"><a
+									href="https://www.notion.so/Forum-Signatures-4df5cf9bbfea49619dd2e17efec2facf">Forum
+									Signatures</a></td>
+							<td class="cell-Eq]h"><a
+									href="https://www.pokecommunity.com/showthread.php?t=321786">https://www.pokecommunity.com/showthread.php?t=321786</a>
+							</td>
+							<td class="cell-Z`xQ">2012-2014</td>
+							<td class="cell-fhtm"><span class="selected-value select-value-color-blue">graphic
+									design</span></td>
+							<td class="cell-SG}=">small, usually 500x200px, graphics for people on various forums. made
+								in an illegal copy of photoshop cs6. probably the first set of graphic design work i did
+								and was passionate for. kind of cringe to look at now.</td>
+						</tr>
+						<tr id="6f89811a-ee8b-40a4-8ac5-ce551e519998">
+							<td class="cell-title"><a
+									href="https://www.notion.so/High-school-theatre-acting-6f89811aee8b40a48ac5ce551e519998">High-school
+									theatre acting</a></td>
+							<td class="cell-Eq]h">sorry, the shows were not recorded.</td>
+							<td class="cell-Z`xQ">2012-14</td>
+							<td class="cell-fhtm"><span class="selected-value select-value-color-default">acting</span>
+							</td>
+							<td class="cell-SG}=">an outlet where I could pretended that im my friends and my friends
+								that they are me.</td>
+						</tr>
+						<tr id="9a6844ee-f387-43a5-b6f6-f5e1e7a31cff">
+							<td class="cell-title"><a
+									href="https://www.notion.so/Audio-Light-technican-9a6844eef38743a5b6f6f5e1e7a31cff">Audio/Light
+									technican</a></td>
+							<td class="cell-Eq]h"></td>
+							<td class="cell-Z`xQ">2010-2014</td>
+							<td class="cell-fhtm"><span class="selected-value select-value-color-red">audio</span><span
+									class="selected-value select-value-color-gray">video</span></td>
+							<td class="cell-SG}=">playing around with knobs to make people sound nice at school events
+								and lighting up some people at theatre. birthplace of my love for tactile knobs.</td>
+						</tr>
+						<tr id="eba118cb-a90a-4ed6-9f8b-c7b4c2ad63b9">
+							<td class="cell-title"><a
+									href="https://www.notion.so/Lego-Stopmotion-filmi-eba118cba90a4ed69f8bc7b4c2ad63b9">Lego
+									Stopmotion filmi</a></td>
+							<td class="cell-Eq]h">im actually very sad i couldn’t find these.</td>
+							<td class="cell-Z`xQ">2010</td>
+							<td class="cell-fhtm"><span
+									class="selected-value select-value-color-yellow">animation</span></td>
+							<td class="cell-SG}=">attempts at recreating the amazing world of lego star wars stopmotion
+								youtube rabbit-hole that consumed my life when I was 12</td>
+						</tr>
+						<tr id="caabfce3-72fa-4c4c-b65e-8b248165f6f9">
+							<td class="cell-title"><a
+									href="https://www.notion.so/FlipBoom-animations-caabfce372fa4c4cb65e8b248165f6f9">FlipBoom
+									animations</a></td>
+							<td class="cell-Eq]h">im actually very sad i couldn’t find these.</td>
+							<td class="cell-Z`xQ">2009</td>
+							<td class="cell-fhtm"><span
+									class="selected-value select-value-color-yellow">animation</span></td>
+							<td class="cell-SG}=">animations created in Toon Boom’s kids oriented variant. introduction
+								to frame-by-frame animation and the first “software gift” i received. disk archived
+								under the stairs at my parents home. </td>
+						</tr>
+						<tr id="d5cde024-c4e3-4987-9998-2f208b7e3507">
+							<td class="cell-title"><a
+									href="https://www.notion.so/Comics-d5cde024c4e3498799982f208b7e3507">Comics</a></td>
+							<td class="cell-Eq]h">im actually very sad i couldn’t find these.</td>
+							<td class="cell-Z`xQ">2008</td>
+							<td class="cell-fhtm"><span
+									class="selected-value select-value-color-pink">illustration</span></td>
+							<td class="cell-SG}=">a vivid memory of making comics. none were found during the creation
+								of this spreadsheet. assumed to be lost in the ether.</td>
+						</tr>
+						<tr id="e0f7dbb9-43c0-418c-aa91-c28b70e02bae">
+							<td class="cell-title"><a
+									href="https://www.notion.so/Letalo-airplane-e0f7dbb943c0418caa91c28b70e02bae">Letalo
+									(airplane)</a></td>
+							<td class="cell-Eq]h"><a
+									href="https://i.imgur.com/ElokaIU.jpeg">https://i.imgur.com/ElokaIU.jpeg</a></td>
+							<td class="cell-Z`xQ">2004</td>
+							<td class="cell-fhtm"><span class="selected-value select-value-color-orange">painting</span>
+							</td>
+							<td class="cell-SG}=">first piece of work my parents deemed important enough to frame.
+								currently located in my granddads apartment on the wall in the living room.</td>
+						</tr>
+						<tr id="80f7c155-d80b-4b7f-a0bf-42d6a347d723">
+							<td class="cell-title"><a
+									href="https://www.notion.so/Picture-of-a-house-80f7c155d80b4b7fa0bf42d6a347d723">Picture
+									of a house</a></td>
+							<td class="cell-Eq]h"><a
+									href="https://i.imgur.com/WOUBXZP.jpeg">https://i.imgur.com/WOUBXZP.jpeg</a></td>
+							<td class="cell-Z`xQ">2002 (?)</td>
+							<td class="cell-fhtm"><span
+									class="selected-value select-value-color-pink">illustration</span></td>
+							<td class="cell-SG}=">probably the earliest saved art piece. produced by my evil alter-ego
+								called “bri” and not “brin”</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</article>
+	</body>
+
+</html>
