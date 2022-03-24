@@ -3,6 +3,10 @@ function toggleId(element_id) {
     let div = document.getElementById(element_id)
     div.style.display = "block"
 }
+function showMap() {
+    let div = document.getElementById(element_id)
+    div.style.display = "block"
+}
 
 function hideAllItems() {
     var divsToHide = document.getElementsByClassName("collection-item"); //divsToHide is an array
