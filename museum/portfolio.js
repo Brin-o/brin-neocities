@@ -32,29 +32,6 @@ function changeColors(bgType) {
 // MINIMAP FUNCTION
 
 function showMap(location, color = "light") {
-    hideAllItems()
     let map = document.getElementById("map")
     map.style.display = "block"
-    selectMapLocation(location)
-
-    //map img hiding/showing
-    var mapDark = document.getElementById("map-img-dark")
-    mapDark.style.display = "none"
-    var mapLight = document.getElementById("map-img-light")
-    mapLight.style.display = "none"
-    var visibleMap = document.getElementById("map-img-" + color)
-    visibleMap.style.display = "inline-block"
-
-
-}
-function selectMapLocation(location) {
-    var mapItems = document.getElementsByClassName("map-location"); //divsToHide is an array
-    for (var i = 0; i < mapItems.length; i++) {
-        if (mapItems[i].id == location) {
-            mapItems[i].classList.add("selected");
-        }
-        else {
-            mapItems[i].classList.remove("selected");
-        }
-    }
 }

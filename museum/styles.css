@@ -53,46 +53,45 @@ a:visited {
 body .left {
   text-align: center;
   height: 100%;
-  width: 35%;
+  width: 40%;
   /* background-color: pink; */
 }
 body .right {
   height: 100%;
-  width: 65%;
+  width: 60%;
   /* background: red; */
 }
 
-#about{
+#about {
   display: block;
   margin-top: 5%;
   text-align: left;
   margin-left: 15%;
   margin-right: 30%;
 }
-#about h1{
+#about h1 {
   margin-bottom: 1rem;
 }
-#about h2{
-  margin-bottom: 0.25rem;  
+#about h2 {
+  margin-bottom: 0.25rem;
   margin-top: 0.25rem;
-
 }
 
-#map{
+#map {
+  text-align: center;
   display: none;
   margin-top: 10%;
 }
-#map p{
+#map p {
   margin-top: 1.5rem;
 }
 
-
 /* collection */
 .collection-item {
-  /* margin: 5%; */
+  margin-top: 10%;
   margin-left: 15%;
   margin-right: 15%;
-  text-align: center;
+  text-align: left;
   display: none;
 }
 .collection-item h1 {
@@ -112,7 +111,7 @@ video {
   /* filter: drop-shadow(0 0 3rem rgba(0, 0, 0, 0.253)); */
 }
 .collection-item img {
-  margin-top: 1rem;
+  /* margin-top: 1rem; */
   margin-bottom: 1.5rem;
 }
 
@@ -121,8 +120,8 @@ video {
 }
 
 #bipsi {
-  margin-top: 15%;
-  margin-left: 10%;
+  margin-top: 5%;
+  margin-left: 0%;
   /* filter: drop-shadow(0 0 2rem rgba(0, 0, 0, 0.534)); */
   /* border-radius: 8px; */
 }
