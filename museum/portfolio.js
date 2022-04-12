@@ -3,6 +3,7 @@ function toggleId(element_id) {
     let div = document.getElementById(element_id)
     div.style.display = "block"
 }
+
 function showMap() {
     let div = document.getElementById(element_id)
     div.style.display = "block"
@@ -18,6 +19,7 @@ function hideAllItems() {
 }
 const cLight = "#f1f2da"
 const cDark = "#00303b"
+
 function changeColors(bgType) {
     var cFont = "#FFFFFF"
     var cBG = "#000000"
@@ -38,4 +40,11 @@ function changeColors(bgType) {
 function showMap(location, color = "light") {
     let map = document.getElementById("map")
     map.style.display = "block"
+}
+
+setInterval(setRandomTabNumber, 4000)
+
+function setRandomTabNumber() {
+    let number = 42 + Math.floor(Math.random() * 27)
+    document.getElementById("tabs").innerHTML = number.toString()
 }
